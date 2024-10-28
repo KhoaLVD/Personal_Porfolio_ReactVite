@@ -33,8 +33,8 @@ export default function Hero() {
             <motion.h2 variants = {textVariants}>KHOA LE VU DANG</motion.h2>
             <motion.h1 variants = {textVariants}>Front-end Developer and UX/UI designer</motion.h1>
             <motion.div variants = {textVariants} className="buttons">
-                <motion.button href="#Portfolio" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-center" variants = {textVariants}>Latest works</motion.button>
-                <motion.button variants = {textVariants}>Contact</motion.button>
+                <motion.button className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-center" variants = {textVariants}>Latest works</motion.button>
+                <motion.button href="./KhoaLVD_Resume.pdf" download="myCV" variants = {textVariants}>Contact</motion.button>
             </motion.div>
             <motion.img variants = {textVariants} src="./scroll.png" animate="scrollButton" alt="" />
         </motion.div>
