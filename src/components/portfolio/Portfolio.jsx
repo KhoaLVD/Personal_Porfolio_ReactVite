@@ -11,20 +11,21 @@ const Single = ({item}) =>{
     const ref = useRef();
     const {scrollYProgress} = useScroll({
         target: ref,
+        // offset:["start start", "end start"]
     });
-    const y = useTransform(scrollYProgress, [0,1], [-300, 300]);
+    const y = useTransform(scrollYProgress, [0,1], [-200, 200]);
     return (
         <section>
             <div className="container">
                 <div className="wrapper">
-                    <div className="imageContainer">
+                    <div className="imageContainer" ref={ref}>
                         <img src={item.img} alt="" />
                     </div>
-                <motion.div className="textContainer" >
-                    <h2>{item.title}</h2>
-                    <p>{item.desc}</p>
-                    <button>See more</button>
-                </motion.div>
+                    <motion.div className="textContainer" style={{y}}>
+                        <h2>{item.title}</h2>
+                        <p>{item.desc}</p>
+                        <button className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg px-2 py-3 w-48 text-center mb-2">See more</button>
+                    </motion.div>
                 </div>               
             </div>
         </section>
