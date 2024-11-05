@@ -1,30 +1,17 @@
 import './App.scss'
-import Navbar from './components/navbar/Navbar'
-import Hero from './components/hero/Hero'
-import Parallax from './components/parallax/Parallax'
-import Portfolio from './components/portfolio/Portfolio'
-import Contact from './components/contact/Contact'
-import Cursor from './components/cursor/Cursor'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Homepage from './components/homepage/Homepage'
 function App() {
 
 
   return (
-    <>
-    <Cursor />
-    <section id="Homepage"> 
-    <Navbar />
-    <Hero />
-    </section>
-     <section id="Portfolio"><Parallax type="portfolio"/></section>
-     <Portfolio />
-     <section id="Contact"><Parallax type="contact"/>
-     </section> 
-     <section>
-     <Contact />
-     </section>
+    <BrowserRouter>
+    <Routes>
+      <Route path='' element={<Homepage />} />
+    </Routes>
     
 
-    </>
+    </BrowserRouter>
   )
 }
 

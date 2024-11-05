@@ -2,12 +2,12 @@ import { useState } from "react"
 import { delay, motion } from "framer-motion"
 import "./sidebar.scss"
 import Links from "./links/Links"
-import ToggleButton from "./toggleButton/toggleButton"
+import ToggleButton from "./toggleButton/ToggleButton"
 import { clipPath } from "framer-motion/client"
 export default function Sidebar() {
     const [open, setOpen] = useState(false);
     const variants = {
-        open: { clipPath: "circle(1200px at 50px 50px),",
+        open: { clipPath: "circle(1200px at 50px 50px)",
             transition:{
                 type:"spring",
                 stiffness: 20,

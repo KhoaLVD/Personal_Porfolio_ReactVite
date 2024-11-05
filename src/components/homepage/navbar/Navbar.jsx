@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
         {/*Sidebar  */}
-        {/* <Sidebar /> */}
+        <Sidebar />
         <div className="wrapper">
             <span>KhoaLVD</span>
             <div className="social flex">
